@@ -4,6 +4,7 @@ body {
     font-size: 15px;
     color: 333;
     line-height: 1.6;
+    background-color: #222;
 }
 
 *,
@@ -412,16 +413,24 @@ hr {
 
 .devices{
     width: 100%;
-    max-width: 600px;
+    max-width: 970px;
     margin:0, auto;
     position: relative;
 }
 
 .devices__item{
-    display: block;
-    
+    margin-left: 250px;
+    width: 500px;
+    height: 650px;
 }
-
+.devices__item--iphone {
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    z-index: 1;
+    width: 209px;
+    height: 440px;
+}
 
 
 
