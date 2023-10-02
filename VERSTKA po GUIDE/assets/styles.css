@@ -13,7 +13,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 auto;
+    margin: 0 auto;
 }   
 
 hr {
@@ -35,7 +35,7 @@ hr {
 
  /* Intro */
 
- .intro {
+.intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,16 +46,16 @@ hr {
     -webkit-background-size: cover;
     background-size: cover;
 
- }
+}
 
- .intro__title {
+.intro__title {
     font-size: 70px;
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1;
- }
- 
- .intro__title::after {
+}
+
+.intro__title::after {
     content: "";
     display: block;
     width: 60px;
@@ -64,26 +64,26 @@ hr {
 
     background-color:rgb(135, 227, 255);
 
- }
+}
 
- .intro__subtitle{
+.intro__subtitle{
     margin-bottom: 15px;
     font-size: 50px;
     color: fff;
 
- }
+}
 
- .intro__inner{
+.intro__inner{
     width: 100%;
     max-width: 880px;
     margin: 0 auto;
     color: white;
     text-align: center;
- }
+}
 
- /* HEader */
+ /* Header */
 
- .header {
+.header {
     padding-top: 30px;
     width: 100%;
 
@@ -93,29 +93,29 @@ hr {
     right: 0;
     z-index: 1000;
 
- }
- 
- .header__inner {
+}
+
+.header__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
- }
+}
 
- .header__logo {
+.header__logo {
     font-size: 30px;
     font-weight: 700;
     color: white;
- }
+}
 
 /* nav */
 
- .nav {
+.nav {
     font-size: 14px;
     text-transform: uppercase;
     
- }
+}
 
- .nav__link{
+.nav__link{
     display: inline-block;
     vertical-align: top;
     margin:0 15px;
@@ -125,8 +125,8 @@ hr {
     text-decoration:none;
 
     transition: color 0.2s linear;
- }
- .nav__link::after {
+}
+.nav__link::after {
     content: "";
     display: block;
     width: 100%;
@@ -140,24 +140,24 @@ hr {
     left: 0;
     z-index: 1;
     transition: opacity 0.2s linear;
- }
+}
 
- .nav__link:hover {
+.nav__link:hover {
     color:rgb(127, 245, 251);
- }
+}
 
- .nav__link:hover::after,
- .nav__link.active::after {
+.nav__link:hover::after,
+.nav__link.active::after {
     opacity: 1;
- }
+}
 
- .nav__link.active{
+.nav__link.active{
     color: #93f4ff;
- }
+}
 
  /* button */
 
- .btn{
+.btn {
     display: inline-block;
     vertical-align: top;
     padding: 8px 30px;
@@ -170,12 +170,13 @@ hr {
     text-transform: uppercase;
     text-decoration: none;
     transition: background 0.2s linear,
-     color 0.2s linear;
- }
- .btn:hover{
+    color 0.2s linear;
+}
+
+.btn:hover {
     background-color:#93f4ff ;
-    color: #93f4ff;
- }
+    color: #000000;
+}
 
 /* Slider */
 .slider {
@@ -307,8 +308,7 @@ hr {
     opacity: 1;
 }
 .about__img{
-    background: linear-gradient(to bottom,#222,
- #367f97);
+    background: linear-gradient(to bottom,#222,#367f97);
     transition: transform .2s linear;
 }
 
