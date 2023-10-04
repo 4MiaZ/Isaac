@@ -23,7 +23,7 @@ hr {
     display: block;
     margin: 40px 0;
     
-    background-color: rgb(123, 202, 255);
+    background-color: #1a3147;
     border: 0;
 }
 
@@ -63,7 +63,7 @@ hr {
     height: 3px;
     margin: 40px auto;
 
-    background-color:rgb(135, 227, 255);
+    background-color:#87e3ff;
 
 }
 
@@ -288,42 +288,52 @@ hr {
 }
 
 
-/* About */
-.about{
+/* card */
+.card{
     margin-top: 80px;
     display: flex;
     justify-content: space-between;
 }
 
-.about__item{
+.card__item{
     width: 380px;
+    
+
+}
+.card__inner{
     position: relative;
 
     background-color: #313e43;
 }
 
-.about__item:hover .about__img{
+.card__item:hover .card__img{
     transform: translate3d(10px,-10px,0);
 }
 
-.about__item:hover .about__img img{
+.card__item:hover .card__img img{
     opacity: .1;
 }
 
-.about__item:hover .about__text{
+.card__item:hover .card__text{
     opacity: 1;
 }
-.about__img{
-    background: linear-gradient(to bottom,#222,#367f97);
+.card__img{
+    background: linear-gradient(to bottom,#40b6ff,#000000);
     transition: transform .2s linear;
 }
 
-.about__img img{
+.card__img img{
     display: block;
     transition: opacity .1s linear;
 }
 
-.about__text{
+.card__icon{
+    height: 257px;
+    width: 380px;
+
+}
+
+.card__text{
     width: 100%;
 
     color: white;
@@ -530,6 +540,11 @@ display: block;
     left: 20px;
     z-index: 1;
 
+    filter: invert(100%) sepia(84%)
+     saturate(368%) hue-rotate(133deg)
+      brightness(105%)
+     contrast(103%) grayscale(100%);
+
     transform: translateY(-50%);
 
     width: 35px;
@@ -618,9 +633,47 @@ display: block;
     transform: rotate(135deg);
 }
 
+/*card */
+
+.team__icon{
+    margin: auto;
+    width: 350px;
+    height: 450px;
+}
+
+/* Social */
+
+.social{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.social__item{
+    height: 55px;
+    width: 55px;
+
+    padding: 12px 10px;
+    background-color: #1a3147;
+    border-right: 1px #87e3ff solid;
+
+    font-size: 30px;
+    text-decoration: none;
+    color: #87e3ff;
+    line-height: 1;
+
+    transition: background 0.1s linear, color 0.1s linear;
+}
 
 
+.social__item:last-child{
+    border-right: 0;
+}
 
+.social__item:hover{
+    background-color: #87e3ff;
+    color: #333;
+}
 
 
 
