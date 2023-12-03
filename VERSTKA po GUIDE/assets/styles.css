@@ -27,9 +27,6 @@ hr {
     border: 0;
 }
 
-.page {
-    /* overflow: hidden; */
-}
 
 /* Container */
 .container {
@@ -49,6 +46,7 @@ hr {
     height: 100vh;
     min-height: 650px;
     position: relative;
+    
 
     background:url(Picture/backgr.png) center no-repeat;
     -webkit-background-size: cover;
@@ -103,7 +101,9 @@ hr {
 
 }
 
-.header--fixed{
+.fixed {
+    padding: 10px 0;
+
     background-color: #1a3147;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 
@@ -112,9 +112,10 @@ hr {
     right: 0;
     left: 0;
     transform: translate3d(0, 0, 0);
+    z-index: 2;
 }
 
-.header.active{
+.header.active {
     background-color: #1a3147;
 }
 
@@ -128,6 +129,8 @@ hr {
     font-size: 30px;
     font-weight: 700;
     color: white;
+
+    cursor: pointer;
 }
 
 /* nav */
@@ -196,6 +199,10 @@ hr {
     width: 30px;
     padding: 10px 0;
     display: none;
+}
+
+.nav-toggle:focus {
+    outline: 0;
 }
 
 .nav-toggle__item{
@@ -632,7 +639,7 @@ display: block;
     padding: 15px 20px 15px 70px;
     position: relative;
 
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid white;
 
     cursor: pointer;
 }
@@ -699,6 +706,7 @@ display: block;
 }
 
 .reviews__item{
+    min-height: 210px;
     padding-left: 205px;
     position: relative;
 }
@@ -742,9 +750,14 @@ display: block;
 }
 
 
-.reviews__btn{
+.slick-arrow{
+    display: block;
     font-size: 0;
     color: transparent;
+
+    border: 0;
+    background: none;
+    cursor: pointer;
 
     position: absolute;
     top: 50%;
@@ -753,7 +766,12 @@ display: block;
 
 }
 
-.reviews__btn:after{
+.slick-arrow:focus{
+    outline: 0;
+}
+
+
+.slick-arrow:after{
     content: "";
     display: block;
     width: 16px;
@@ -764,14 +782,28 @@ display: block;
 
 }
 
-.reviews__btn--prev{
+.slick-prev {
     left: 0;
     transform: rotate(-45deg);
 }
-.reviews__btn--next{
+.slick-next{
     right: 0;
     transform: rotate(135deg);
 }
+
+/* Slick */
+
+.slick-slide{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+.slick-slide img{
+    display: block;
+}
+
 
 /*card */
 
@@ -1462,9 +1494,6 @@ opacity: 1;
         padding-bottom: 20px;
     }
 
-    .footer__text{
-       
-    }
 
     .footer__title{
         padding-left: 1%;
@@ -1527,6 +1556,10 @@ opacity: 1;
         background-color: #1a3147;
     }
 
+    .nav.active {
+        display: block;
+    }
+
     .nav__link{
         display: block;
         margin: 0;
@@ -1540,7 +1573,7 @@ opacity: 1;
     /* .section */
 
     .section{
-        padding: 40px 0;
+        padding: 50px 0;
     }
 
     .section--devices{
